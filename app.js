@@ -1,14 +1,8 @@
+const validator = require('validator')
 const getNotes = require('./notes.js')
 
-//opcion simple
-console.log(getNotes())
+const msg = getNotes()
+console.log(msg)
 
-//opcion using a variable
-// const msg = getNotes()
-// console.log(msg)
-
-
-
-// const add = require('./utils.js')
-// const sum = add(4, -2)
-// console.log(sum)
+console.log(validator.isEmail('example.com'))
+console.log(validator.isURL('https:mead.io'))
