@@ -54,12 +54,33 @@ yargs.command({
 //Create read command
 yargs.command({
 	command: "read",
-	describe: "read a note",
-	handler() {
-		console.log("Reading a note!");
+    describe: "read a note",
+    builder: {
+        title: {
+            describe: "Note title",
+            demandOption: true, 
+            type: "string"
+        }
+    },
+	handler(argv) {
+        notes.readNote(argv.title);
 	},
 });
+
 
 yargs.parse();
 
 //console.log(yargs.argv)
+
+    //comandos con los que uso este programa
+//agregar
+//node app.js add --title="t3" --body="b3"
+
+//remove
+//node app.js remove --title="t3"
+
+//abrir una
+//node app.js read --title="t2"
+
+//listar
+//node app.js list
