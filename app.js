@@ -84,3 +84,21 @@ yargs.parse();
 
 //listar
 //node app.js list
+
+///////////////PARA DEBUGEAR///////////////////////////////////
+//Usar Debugger
+	//1. se agrega la linea "debugger". (el inspect, se va a detener cuando llegue a esto)
+	//2. se le agrega la palabra "inspect" al comando.
+	//3. se corre el comando de abajo
+		//node inspect app.js add --title="Courses" --body="courses"
+	//4. en chrome abrimos: chrome://inspect
+	//5. en config pongo config y agrego
+		//127.0.0.1:9229   //9229 es el numero que me sale en el localhost justo arriba(osea q me quedan 2, el localhost:9229 y el 127.0.0.1:9229)
+	
+	//6."debuggear""
+		//a. siguiendo con el 1.,  cuando pongo "play" llega hasta la linea de "debugger" y se frena (no importa q sea en otro archivo)
+		//b. cuando se frena, en la parte de consola(se abre con esc), puedo ver el valor de cada variable. (tambien se puede ver en Scope)
+		//c. y pongo "play" y sigue hasta el final de todo
+
+	//7. si quisiera modificar y volver a ver, en la consola donde se hizo el "inspect" (q va a estar con el debugger abierto) se pone "restart"
+	//7b. para salir ctrl c
